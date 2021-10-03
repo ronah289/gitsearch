@@ -32,15 +32,15 @@ export class GitserviceService {
       created_at:Date,
     }
     let headers = new HttpHeaders({'Authorization':'token' + environment.pass})
-    let searchFor = environment.baseUrl + whatToSearch ;
-    let inHead={headers:headers}
+    let request = environment.baseUrl + whatToSearch ;
+    let params={headers:headers}
     let promise = new Promise((resolve, reject) => {
-      this.http.get<GithubApi>(searchFor,inHead).toPromise().then((response) => { this.user = response;
+      this.http.get<GithubApi>(request,params).toPromise().then((response: User) => { this.user = response;
             
             resolve(resolve);
             console.log(this.user)
           },
-          (error) => {
+          (error:any) => {
             reject();
             console.log(error)
           }
@@ -59,14 +59,14 @@ export class GitserviceService {
       homepage:string
     }
     let headers = new HttpHeaders({'Authorization':'token' + environment.pass})
-    let inHead={headers:headers}
+    let params={headers:headers}
     let url = environment.baseUrl  + user + '/repos';
     let promise = new Promise((resolve, reject) => {
-      this.http.get<GithubApi>(url,inHead).toPromise().then(response => {
+      this.http.get<GithubApi>(url,params).toPromise().then((response) => {
         this.repository = response;
         resolve(resolve)
   
-      }, error => {
+      }, (error: any) => {
         reject();
         console.log(error)
       })
