@@ -1,27 +1,41 @@
-# Gitsearch
+# GitSearch
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.7.
+## Author
 
-## Development server
+* Kibet Ronald  
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Description
 
-## Code scaffolding
+* A web application to allow users search for github users and repositories
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Prerequisites
 
-## Build
+To run this software, you need: nodejs,npm and angular CLI installed
+Install using the commands:
+`$curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -`
+`$sudo apt-get install -y nodejs`
+`$sudo npm install npm@latest -g`
+`$sudo npm install -g @angular/cli`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Setup
 
-## Running unit tests
+To access this project locally in your machine,use the command:
+`$ git clone https://github.com/ronah289/gitsearch.git`
+to clone to your machine.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Technologies Used
 
-## Running end-to-end tests
+* html5
+* css
+* Typescript
+* Angular
+* bootstrap
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Live Site
 
-## Further help
+* View [live](https://ronah289.github.io/gitsearch)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## License Information
+
+* This software is licensed under MIT License.
+* [Read More](https://choosealicense.com/licenses/mit/) on the license.
