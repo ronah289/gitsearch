@@ -2,3 +2,9 @@
     padding-left: 6.5px;
     margin: none;
 }
+.card-title{
+    color:blue
+}
+#language{
+    font-style: italic;
+}

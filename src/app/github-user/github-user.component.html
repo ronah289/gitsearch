@@ -9,8 +9,8 @@
           <ol>
             <li *ngFor="let repo of repository">
               <h3 appHighlight class="card-title" >{{ repo.name | titlecase }}</h3>
-              <p>{{ repo.description }}</p>
-              <p>{{ repo.language }}</p>
+              <p class="card">{{ repo.description }}</p>
+              <p id='language'>{{ repo.language }}</p>
               <button class="btn">
                 <a href="{{ repo.html_url }}" class="btn btn-success" target="_blank" >Visit Repository</a>
               </button>
