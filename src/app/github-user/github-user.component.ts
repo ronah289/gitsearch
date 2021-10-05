@@ -15,8 +15,8 @@ export class GithubUserComponent implements OnInit {
   constructor(private gitService: GitserviceService) {
 
   }
-  findThisUser(nameOfUser: any) {
-    this.gitService.findUser(nameOfUser).then((success) => {
+  findThisUser(whatToSearch: any) {
+    this.gitService.findUser(whatToSearch).then((success) => {
       this.user = this.gitService.user
     })
   }
