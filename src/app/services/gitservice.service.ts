@@ -12,7 +12,7 @@ export class GitserviceService {
   user!: User;
 
   constructor(private http:HttpClient) { 
-    this.user = new User('','','','',0,0,0,'')
+    this.user = new User('','','','',0,0,0,'','')
   }
   findUser(whatToSearch:any){
     interface GithubApi{
@@ -24,6 +24,7 @@ export class GitserviceService {
       followers:number,
       following:number,
       bio:string,
+      avatar_url:string,
     }
     let headers = new HttpHeaders({'Authorization':'token ' + environment.pass})
     let searchFor = environment.baseUrl + whatToSearch ;
