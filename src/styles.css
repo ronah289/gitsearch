@@ -4,6 +4,7 @@ body{
     background-color: aliceblue;
     font-family: 'Courier New', Courier, monospace;
     font-size: medium;
+    background-image: url('../src/assets/images/background.jpg');
 }
 h*{
     font-weight: 600;

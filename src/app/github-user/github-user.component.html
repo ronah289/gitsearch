@@ -1,12 +1,10 @@
 <div class="container" >
   <app-user-input-form (sendValue)="findThisUser($event)"></app-user-input-form>
   <hr />
-  <br />
-  <hr />
   <div *ngIf="user; repository">
     <div id="all-content" class="row">
       <div class="col-md-8">
-        <h2>Repositories:</h2>
+        <h2 class="bg-white text-center">Repositories:</h2>
         <div class="card">
           <ol>
             <li *ngFor="let repo of repository">
@@ -21,7 +19,7 @@
           <hr />
         </div>
       </div>
-      <div class="user-info col-md-4">
+      <div class="user-info col-md-4 text-white">
         <h2>User-Info</h2>
         <img
           src="{{ user.avatar_url }}"
@@ -31,8 +29,9 @@
         />
         <p>{{ user.name }}</p>
         <p>{{ user.login }}</p>
-        <p>{{ user.html_url }}</p>
         <p>{{ user.bio }}</p>
+        <p>Followers:{{user.followers}}</p>
+        <p>Following:{{user.following}}</p>
       </div>
     </div>
   </div>
