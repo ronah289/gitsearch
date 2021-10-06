@@ -7,12 +7,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GithubUserComponent } from './github-user/github-user.component';
 import { UserInputFormComponent } from './user-input-form/user-input-form.component';
+import { DateCounterPipe } from './date-counter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     GithubUserComponent,
-    UserInputFormComponent
+    UserInputFormComponent,
+    DateCounterPipe
   ],
   imports: [
     BrowserModule,

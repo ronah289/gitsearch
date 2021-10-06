@@ -14,7 +14,7 @@ export class GitserviceService {
   repository!: Repository;
 
   constructor(private http:HttpClient) { 
-    this.user = new User('','','','',0,0,0,'','')
+    this.user = new User('','','','',0,0,0,'','',new Date(),)
     this.repository = new Repository('','','','',)
   }
   // handle a user name input
@@ -29,6 +29,7 @@ export class GitserviceService {
       following:number,
       bio:string,
       avatar_url:string,
+      created_at:Date,
     }
     let headers = new HttpHeaders({'Authorization':'token' + environment.pass})
     let searchFor = environment.baseUrl + whatToSearch ;
