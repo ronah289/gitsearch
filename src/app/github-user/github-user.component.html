@@ -8,7 +8,7 @@
         <div class="card">
           <ol>
             <li *ngFor="let repo of repository">
-              <h3 class="card-title" >{{ repo.name | titlecase }}</h3>
+              <h3 appHighlight class="card-title" >{{ repo.name | titlecase }}</h3>
               <p>{{ repo.description }}</p>
               <p>{{ repo.language }}</p>
               <button class="btn">
@@ -32,7 +32,7 @@
         <p>{{ user.bio }}</p>
         <p>Followers:{{user.followers}}</p>
         <p>Following:{{user.following}}</p>
-        <p>Joined: {{user.created_at}} years ago</p>
+        <p>Joined: {{user.created_at | dateCounter}} years ago</p>
       </div>
     </div>
   </div>

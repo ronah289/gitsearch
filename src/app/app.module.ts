@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { GithubUserComponent } from './github-user/github-user.component';
 import { UserInputFormComponent } from './user-input-form/user-input-form.component';
 import { DateCounterPipe } from './date-counter.pipe';
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     GithubUserComponent,
     UserInputFormComponent,
-    DateCounterPipe
+    DateCounterPipe,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,

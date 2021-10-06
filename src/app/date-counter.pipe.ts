@@ -14,7 +14,7 @@ export class DateCounterPipe implements PipeTransform {
     var dateCounter = dateDifferenceSeconds / secondsInDay;
 
     if (dateCounter >= 1 && value < todayWithNoTime) {
-      return Math.ceil(dateCounter/365);
+      return dateCounter/365;
     } else {
       return 0;
     }
