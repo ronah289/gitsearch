@@ -30,7 +30,7 @@ export class GitserviceService {
       bio:string,
       avatar_url:string,
     }
-    let headers = new HttpHeaders({'Authorization':'token ' + environment.pass})
+    let headers = new HttpHeaders({'Authorization':'token' + environment.pass})
     let searchFor = environment.baseUrl + whatToSearch ;
     let inHead={headers:headers}
     let promise = new Promise((resolve, reject) => {
@@ -50,16 +50,18 @@ export class GitserviceService {
   //end of user processor
 
   // handle repository search
-  showRepositories(whatToSearch:any){
+  showRepositories(user:any){
     interface GithubApi{
       html_url:string,
       description:string,
       language:string,
       homepage:string
     }
-    let url = environment.pass  + whatToSearch + '/repos' + '?access_token=' + environment.pass;
+    let headers = new HttpHeaders({'Authorization':'token' + environment.pass})
+    let inHead={headers:headers}
+    let url = environment.baseUrl  + user + '/repos';
     let promise = new Promise((resolve, reject) => {
-      this.http.get<GithubApi>(url).toPromise().then(response => {
+      this.http.get<GithubApi>(url,inHead).toPromise().then(response => {
         this.repository = response;
         resolve(resolve)
   
