@@ -2,4 +2,12 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 body{
     background-color: aliceblue;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+}
+h*{
+    font-weight: 600;
+}
+p{
+    font-weight: 400;
 }
