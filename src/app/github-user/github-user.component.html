@@ -1,12 +1,17 @@
-<app-user-input-form  (sendValue)="findThisUser($event)"></app-user-input-form>
-<div *ngIf="user,repository">
-    <p>{{user.name}}</p>
-    <p>{{user.login}}</p>
-    <p>{{user.html_url}}</p>
-    <p>{{user.repos_url}}</p>
-    <p>{{user.bio}}</p>
-    <img src="{{user.avatar_url}}" alt="">
-    <li *ngFor="let c of repository">
-{{c.html_url}}
-    </li>
+<app-user-input-form (sendValue)="findThisUser($event)"></app-user-input-form>
+<div id="all-content" class="row">
+    <div class="col-md-8" >
+        <li *ngFor="let c of repository">
+            <h3>{{ c.name }}</h3>
+            <a href="{{ c.html_url }}">visit</a>
+          </li>
+    </div>
+<div *ngIf="user; repository" class="user-info col-md-4" >
+  <p>{{ user.name }}</p>
+  <p>{{ user.login }}</p>
+  <p>{{ user.html_url }}</p>
+  <p>{{ user.repos_url }}</p>
+  <p>{{ user.bio }}</p>
+  <img src="{{ user.avatar_url }}" alt="user-profile-photo" width="45px" height="45px" />
+</div>
 </div>
